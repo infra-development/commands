@@ -1,0 +1,1 @@
+python GenerateReports.py monthly_config_file 1635724800 query_config_file > logs/gen_month_1_dev.log 2>&1

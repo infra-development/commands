@@ -1,0 +1,13 @@
+siq_7s_sqlstream_version: "8.0.0.20183-1fafb12dd"
+siq_7s_image:
+  repository: "service-iq/7s-sqlstream-{{ siq_7s_sqlstream_version }}"
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "6.7.2-guavus23"
+
+bdr_op_image:
+  repository: bdr-side-car
+  pullPolicy: IfNotPresent
+  tag: "1.0-guavus-1-236e6b8"
+
+kafka_brokers: "kafka-kafka-bootstrap.kafka.svc.kubernetes.local:9092"
