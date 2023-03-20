@@ -1,0 +1,13 @@
+1. Variable
+2. Strings
+3. Arrays
+4. Map
+5. else if ladder
+6. for loop
+7. while loop
+8. switch case
+9. function
+10. class
+11. objects
+12. interface
+13. regular expression

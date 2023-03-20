@@ -1,0 +1,57 @@
+[cols="1,2,2,2,2,2"]
+|===
+|Action |GoLang |Java |Scala |Python |Shell
+
+|
+Creating Variables
+
+a|
+[source,go]
+var age int = 42
+var weight float64 = 71.2
+var myFavColor string = "blue"
+
+For local variable only
+[source,go]
+age := 42
+
+a|
+[source, java]
+int age = 42
+float weight = 71.2
+String myFavColor = "blue"
+
+a|
+[source, scala]
+val age : Int = 42
+var weight : Float = 71.2
+var name : String = "Janmejay"
+
+Type is not mandatory
+[source, scala]
+val myFavColr = "blue"
+
+a|
+[source, python]
+my_age = 42
+my_name = "Jaydev"
+
+
+
+
+a|
+[source, shell]
+NAME="Zara Ali"
+
+|===
+For Python
+
+`_var_name` is used for internal purpose and won't be imported if imported following way
+
+[source, python]
+from M import *
+
+`var_name_` used by convention to avoid conflicts with Python keyword. Example follows.
+
+[source, python]
+tkinter.Toplevel(master, class_='ClassName')
