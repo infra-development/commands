@@ -1,50 +1,37 @@
-[cols="1,2,2,2,2,2"]
+*Variable Creation*
+[cols="a,a,a,a"]
 |===
-|Action |GoLang |Java |Scala |Python |Shell
+|Go |Java |Scala |Python
 
-|
-Creating Variables
-
-a|
-[source,go]
+|[source,go]
 var age int = 42
 var weight float64 = 71.2
-var myFavColor string = "blue"
+var myColor string = "blue"
 
 For local variable only
 [source,go]
 age := 42
 
-a|
-[source, java]
+|[source, java]
 int age = 42
 float weight = 71.2
-String myFavColor = "blue"
+String myColor = "blue"
 
-a|
-[source, scala]
-val age : Int = 42
-var weight : Float = 71.2
-var name : String = "Janmejay"
+|[source, scala]
+val age: Int = 42
+var weight: Float = 71.2
+var name: String = "Jay"
 
 Type is not mandatory
 [source, scala]
-val myFavColr = "blue"
+val myColor = "blue"
 
-a|
-[source, python]
+|[source, python]
 my_age = 42
 my_name = "Jaydev"
 
-
-
-
-a|
-[source, shell]
-NAME="Zara Ali"
-
 |===
-For Python
+_For Python_
 
 `_var_name` is used for internal purpose and won't be imported if imported following way
 
@@ -55,3 +42,190 @@ from M import *
 
 [source, python]
 tkinter.Toplevel(master, class_='ClassName')
+
+*Strings*
+[cols="a,a,a,a"]
+|===
+|Go |Java |Scala |Python
+
+|[source, go]
+str := "Janmejay"
+strings.ToLower(str)
+strings.HasSuffix(str, "y")
+strings.contains(str, "a")
+
+|[source, java]
+String str = "Jaydev"
+str.toLowerCase(str)
+str.contains("a")
+str.startsWith("J")
+str.endsWith("v")
+
+|[source, scala]
+var str = "Jaydev"
+str.toLowerCase()
+str.contains("a")
+str.startsWith("J")
+str.endsWith("v")
+
+|[source, python]
+str = "Jaydev"
+str.lower()
+"dev" in str
+str.startswith("J")
+str.endswith("v")
+
+|===
+
+*Array*
+[cols="a,a,a,a"]
+|===
+|Go |Java |Scala |Python
+
+|[source, go]
+var arr [3]int
+var myArr [3]int =
+    [3]int {1, 2, 3}
+myArr2 :=
+    [...]int {1, 2, 3}
+
+
+|[source, java]
+int[] arr = {1, 2, 3};
+String[] arr
+    = new String[3];
+float[] arr
+    = new float[3];
+
+|[source, scala]
+var arr = {1, 2, 3}
+val arr = Array[String](3);
+val arr = Array[String]();
+var z : Array[String]
+    = new Array[String](3)
+
+|[source, python]
+import array as arr
+
+[source, python]
+#Integer type array
+a = arr.array('i', [1, 2, 3])
+#Double type array
+dArr = arr.array('d', [1.2, 2.4])
+#String type array
+sArr = ["hello", "world"]
+emptyArr = []
+
+|Accessing/Setting Elements
+[source, go]
+arr[0] = 10
+fmt.Println(arr[0])
+
+|Accessing/Setting Elements
+[source, java]
+arr[0]= 10;
+System.out.println(arr[0])
+
+|Accessing/Setting Elements
+[source, scala]
+arr(0)= 10;
+println(arr(0))
+
+|Accessing/Setting Elements
+[source, python]
+arr[0]= 10;
+print(arr[0])
+
+|Iterating Elements
+[source, go]
+for i, v := range arr {
+    fmt.Println(i, v)
+}
+
+Another way
+[source, go]
+for i := 0; i < len(arr); i++ {
+    fmt.Println(i, arr[i])
+}
+
+|Iterating Elements
+[source, java]
+for(int i=0; i<arr.length; i++) {
+    System.out.println(arr[i]);
+}
+
+Another way
+[source, java]
+for (int element : arr) {
+    System.out.println(element);
+}
+
+|Iterating Elements
+[source, scala]
+for(i <- 0 until arr.length) {
+    println(i+" "+arr[i]);
+}
+
+Using Range
+[source, scala]
+for(i <- 1 to arr.length-1) {
+    println(i+" "+arr[i]);
+}
+
+Another way
+[source, scala]
+for(myStr <- myArray) {
+    println(myStr);
+}
+
+Returning Values
+[source, scala]
+val nArr = for (e <- arr)
+    yield e.toUpperCase
+
+|Iterating Elements
+[source, python]
+for x in arr:
+    print(x)
+
+Using enumerator
+[source, python]
+for i, v in enumerate(arr):
+    print(i, v)
+
+Using range
+[source, python]
+for i in range(len(arr)):
+    print(i, arr[i]))
+
+|===
+
+*List*
+[cols="a,a,a,a"]
+|===
+|Go |Java |Scala |Python
+
+|Slice
+[source, go]
+sl1 := myArr[0:2]
+sl2 :=
+    []int {1, 2, 3}
+sl3 := make([]int, 10)
+sl4 := make([]int, 10, 15)
+
+|List
+[source, java]
+hello world
+
+|List
+[source, scala]
+hello world
+
+|List
+[source, python]
+hello world
+
+|===
+
+
+

@@ -1,13 +1,14 @@
 1. Variable
 2. Strings
-3. Arrays
+3. Arrays & List
 4. Map
-5. else if ladder
-6. for loop
-7. while loop
-8. switch case
-9. function
-10. class
-11. objects
-12. interface
-13. regular expression
+5. Tuple
+6. else if ladder
+7. for loop
+8. while loop
+9. switch case
+10. function
+11. class
+12. objects
+13. interface
+14. regular expression
