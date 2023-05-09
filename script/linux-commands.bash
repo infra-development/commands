@@ -14,6 +14,3 @@ bzip2 -d file_name.bz2
 bzip2 -t input.txt.bz2
 
 date -d '05/02/2022 00:00:00' +"%s"
-
-Jagdishd@81609
-4b37423260a64c88a721d27394

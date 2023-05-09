@@ -1,0 +1,13 @@
+alias ll='ls -alhtr'
+alias status='git status'
+alias ..='cd ..'
+
+alias gcx='git clean -xfd'
+alias gf='git fetch -v --all'
+alias gr='git rebase'
+alias grd='git rebase origin/dev'
+alias gcd='git checkout dev'
+alias gl="git log --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%C(bold red)%h %C(cyan)| %ad %Creset- %s%C(bold yellow)%d %C(bold blue)<%an> %Cgreen(%cr)%Creset'"
+alias ga='git add -u'
+alias grh='git reset HEAD'
+alias gc='git checkout -- .'
