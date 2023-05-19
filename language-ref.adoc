@@ -1,4 +1,8 @@
+= My Document
+:pdf-page-size: A2
+
 *Variable Creation*
+[opts=]
 [cols="a,a,a,a"]
 |===
 |Go |Java |Scala |Python
@@ -84,25 +88,20 @@ str.endswith("v")
 
 |[source, go]
 var arr [3]int
-var myArr [3]int =
-    [3]int {1, 2, 3}
-myArr2 :=
-    [...]int {1, 2, 3}
+var myArr [3]int = [3]int {1, 2, 3}
+myArr2 := [...]int {1, 2, 3}
 
 
 |[source, java]
 int[] arr = {1, 2, 3};
-String[] arr
-    = new String[3];
-float[] arr
-    = new float[3];
+String[] arr = new String[3];
+float[] arr = new float[3];
 
 |[source, scala]
 var arr = {1, 2, 3}
 val arr = Array[String](3);
 val arr = Array[String]();
-var z : Array[String]
-    = new Array[String](3)
+var z : Array[String] = new Array[String](3)
 
 |[source, python]
 import array as arr
@@ -208,8 +207,7 @@ for i in range(len(arr)):
 |Slice
 [source, go]
 sl1 := myArr[0:2]
-sl2 :=
-    []int {1, 2, 3}
+sl2 := []int {1, 2, 3}
 sl3 := make([]int, 10)
 sl4 := make([]int, 10, 15)
 
