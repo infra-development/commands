@@ -213,7 +213,15 @@ sl4 := make([]int, 10, 15)
 
 |List
 [source, java]
-hello world
+import java.util.*;
+
+List<String> list = new ArrayList<>();
+LinkedList<Integer> list = new LinkedList<>();
+Vector<Double> list = new Vector<>();
+List<String> list = Arrays.asList("Apple", "Banana", "Orange");
+List<String> list = List.of("Apple", "Banana", "Orange");
+
+
 
 |List
 [source, scala]
