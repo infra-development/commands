@@ -213,8 +213,6 @@ sl4 := make([]int, 10, 15)
 
 |List
 [source, java]
-import java.util.*;
-
 List<String> list = new ArrayList<>();
 LinkedList<Integer> list = new LinkedList<>();
 Vector<Double> list = new Vector<>();
