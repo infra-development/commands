@@ -286,6 +286,25 @@ You can manually activate it using
 ubuntu@ubuntu:~$ conda activate base
 ```
 
+To install packages in active conda virtual environment use `conda install` command
+
+```python{style=colorful}
+(my_env) ubuntu@ubuntu:~$ conda install numpy
+(my_env) ubuntu@ubuntu:~$ conda install numpy=1.2.3
+```
+You can install multiple packages at once
+
+```python{style=colorful}
+(my_env) ubuntu@ubuntu:~$ conda install numpy pandas matplotlib
+```
+
+If a package is not available in the Conda repository, you can use the pip command to install packages from the Python Package Index (PyPI) within the active conda environment
+
+```python{style=colorful}
+(my_env) ubuntu@ubuntu:~$ pip install numpy
+```
+
+
 
 
 
