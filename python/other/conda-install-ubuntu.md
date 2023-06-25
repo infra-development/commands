@@ -1,18 +1,18 @@
 # Anaconda Python Distribution on Ubuntu
 
 Download anaconda
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ cd /tmp
 ubuntu@ubuntu:~$ curl https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh --output anaconda.sh
 ```
 
 Run script
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ bash anaconda.sh
 ```
 
 You’ll receive the following output
-```python
+```python{style=colorful}
 Output
 
 Welcome to Anaconda3 2020.02
@@ -25,14 +25,14 @@ Please, press ENTER to continue
 
 Press `ENTER` to continue and then press `ENTER` to read through the license.
 
-```python
+```python{style=colorful}
 Output
 Do you approve the license terms? [yes|no]
 ```
 
 You can press `ENTER` to accept the default location, or specify a different location to modify it.
 
-```python
+```python{style=colorful}
 Output
 Anaconda3 will now be installed into this location:
 /home/ubuntu/anaconda3
@@ -46,7 +46,7 @@ Anaconda3 will now be installed into this location:
 
 Once installation is complete, you’ll receive the following output
 
-```python
+```python{style=colorful}
 Output
 ...
 Preparing transaction: done
@@ -59,7 +59,7 @@ by running conda init? [yes|no]
 
 Type `yes` so that you can initialize Anaconda3.
 
-```python
+```python{style=colorful}
 Output
 ...
 Thank you for installing Anaconda3!
@@ -69,25 +69,25 @@ Thank you for installing Anaconda3!
 You can now activate the installation by sourcing the 
 `~/.bashrc` file
 
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ source ~/.bashrc
 ```
 
 Once you have done that, you’ll be placed into the default base programming environment of Anaconda, and your command prompt will change to be the following
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$
 ```
 
 You can further verify your install by making use of the conda command, for example with `list`
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda list
 ```
 
 You’ll receive output of all the packages you have available through the Anaconda installation
 
-```python
+```python{style=colorful}
 Output
 # packages in environment at /home/ubuntu/anaconda3:
 #
@@ -106,58 +106,58 @@ Now that Anaconda is installed, we can go on to setting up Anaconda environments
 Anaconda virtual environments allow you to keep projects organized by Python versions and packages needed.<br>
 First, we can check to see which versions of Python are available for us to use.
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda search "^python$"
 ```
 
 Let’s create an environment using the most recent version of Python 3
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda create --name my_env python=3
 ```
 
 You can activate your new environment by typing the following
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda activate my_env
 ```
 
 With your environment activated, your command prompt prefix will reflect
 
-```python
+```python{style=colorful}
 (my_env) ubuntu@ubuntu:~$
 ```
 
 Within the environment, you can verify that you’re using the version of Python that you had intended to use
 
-```python
+```python{style=colorful}
 (my_env) ubuntu@ubuntu:~$ python --version
 ```
 
-```python
+```python{style=colorful}
 Output
 Python 3.8.2
 ```
 
 Deactivate anaconda environment
 
-```python
+```python{style=colorful}
 (my_env) ubuntu@ubuntu:~$ conda deactivate
 ```
 
 To target a more specific version of Python, you can pass a specific version to the python argument
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda create -n my_env35 python=3.5
 ```
 
 You can inspect all of the environments
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda info --envs
 ```
 
-```python
+```python{style=colorful}
 Output
 # conda environments:
 #
@@ -170,19 +170,19 @@ The asterisk indicates the current active environment.
 
 Add additional packages, such as `numpy`
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda install --name my_env35 numpy
 ```
 
 If you know you would like a `numpy` environment upon creation, you can target it in your `conda create` command
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda create --name my_env python=3 numpy
 ```
 
 You can remove environment
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda remove --name my_env35 --all
 ```
 
@@ -190,13 +190,13 @@ You can remove environment
 
 First update the `conda` utility
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda update conda
 ```
 
 Once the update of conda is complete, you can update the Anaconda distribution
 
-```python
+```python{style=colorful}
 (base) ubuntu@ubuntu:~$ conda update anaconda
 ```
 
@@ -204,38 +204,38 @@ Once the update of conda is complete, you can update the Anaconda distribution
 
 You should start with the `anaconda-clean` module, which will remove configuration files for when you uninstall Anaconda
 
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ conda install anaconda-clean
 ```
 
 Run the following command
 
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ anaconda-clean
 ```
 
 This will also create a backup folder called `.anaconda_backup` in your home directory
 
-```python
+```python{style=colorful}
 Output
 Backup directory: /home/ubuntu/.anaconda_backup/2020-05-06T024432
 ```
 
 You can now remove your entire Anaconda directory
 
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ rm -rf ~/anaconda3
 ```
 
 you can remove the `PATH` line from your `.bashrc` file that Anaconda added
 
-```python
+```python{style=colorful}
 ubuntu@ubuntu:~$ vim ~/.bashrc
 ```
 
 Then scroll down to the end of the file (if this is a recent install) or type CTRL + W to search for Anaconda. Delete or comment out this Anaconda block
 
-```python
+```python{style=colorful}
 ...
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
