@@ -253,6 +253,38 @@ unset __conda_setup
 # <<< conda initialize <<<
 ```
 
+# Additional Helpful commands
+
+Check conda configuration
+
+```python{style=colorful}
+(base) ubuntu@ubuntu:~$ conda config --show
+```
+To deactivate the `base` conda environment by default without removing it, you can modify your conda configuration
+
+```python{style=colorful}
+(base) ubuntu@ubuntu:~$ conda config --show | grep auto_activate_base
+```
+This will show output as
+
+```python{style-colorful}
+auto_activate_base: True
+```
+
+Set the `auto_activate_base` configuration to `False`, which ensures that the base environment is not automatically activated by default.
+
+
+```python{style=colorful}
+(base) ubuntu@ubuntu:~$ conda config --set auto_activate_base False
+```
+
+To see the change you need to restart the terminal or open new session
+
+You can manually activate it using
+
+```python{style=colorful}
+ubuntu@ubuntu:~$ conda activate base
+```
 
 
 
