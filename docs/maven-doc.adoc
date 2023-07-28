@@ -1,0 +1,5 @@
+Install existing jar-file aspose-cells-19.5.jar into maven .m2 repository manually for windows
+The jar-file present at current directory
+No need to trigger from pom.xml file location.
+
+mvn install:install-file -Dfile='aspose-cells-19.5.jar' -DgroupId='com.aspose' -DartifactId=aspose-cells -Dversion='19.5' -Dpackaging=jar -DgeneratePom=true
