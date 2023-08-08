@@ -29,6 +29,30 @@ Later on these command will be used a alot.
 
 Now `django` server is up and running. Which is available at [http://localhost:8000](http://localhost:8000)
 
+#### 5. Start the app
+
+Create a new app `main` within your django project.
+
+    python manage.py startapp main
+
+Django performs the following actions:
+
+It creates a new directory with the name of your app (in this case, `main`) within your project directory.
+
+Inside the app directory, it creates several files and directories that are the building blocks of your app's structure:
+
+`__init__.py` : This empty file indicates that the directory should be treated as a Python package.
+
+`admin.py` : This is where you can define configurations for the Django admin interface.
+
+`apps.py` : This file contains the configuration for your app.
+
+`models.py` : This is where you define your app's data models using Django's ORM.
+
+`tests.py` : This is where you can write tests for your app.
+
+`views.py` : This is where you define the views that handle HTTP requests and render templates.
+
 
 
 
