@@ -23,35 +23,35 @@ Download Java installer on windows and install it.
 2. Under the Download Apache Spark heading, there are two drop-down menus. Use the current non-preview version.
    - Choose a Spark release -> 3.5.0
    - Choose a package type -> Pre-built for Apache Hadoop 3.
-3. Click the spark-3.5.0-bin-hadoop3.tgz link
+3. Click the `spark-3.5.0-bin-hadoop3.tgz` link
 4. A page with a list of mirrors loads where you can see different servers to download from. Pick any from the list and save the file to your Downloads folder.
 
 Installing Apache Spark involves extracting the downloaded file to the desired location.
 1. Create a new folder named Spark in the root of your C: drive. From a command line, enter the following:
 2. In Explorer, locate the Spark file you downloaded.
-3. Right-click the file and extract it to C:\Spark using the tool you have on your system (e.g., 7-Zip).
-4. Now, your C:\Spark folder has a new folder spark-3.5.0-bin-hadoop3 with the necessary files inside.
+3. Right-click the file and extract it to `C:\Spark` using the tool you have on your system (e.g., 7-Zip).
+4. Now, your `C:\Spark` folder has a new folder `spark-3.5.0-bin-hadoop3` with the necessary files inside.
 
 ### Add winutils.exe File
-Download the winutils.exe file for the underlying Hadoop version for the Spark installation you downloaded.
+Download the `winutils.exe` file for the underlying Hadoop version for the Spark installation you downloaded.
 1. Navigate to this URL https://github.com/cdarlint/winutils and inside the bin folder, locate winutils.exe, and click it.
 2. Find the Download button on the right side to download the file.
-3. Now, create new folders Hadoop and bin on C: using Windows Explorer or the Command Prompt.
-4. Copy the winutils.exe file from the Downloads folder to C:\Hadoop\bin
+3. Now, create new folders `Hadoop` and `bin` on C: using Windows Explorer or the Command Prompt.
+4. Copy the `winutils.exe` file from the Downloads folder to `C:\Hadoop\bin`
 
 ### Configure Environment Variables
-Configuring environment variables in Windows adds the Spark and Hadoop locations to your system PATH. It allows you to run the Spark shell directly from a command prompt window.
+Configuring environment variables in Windows adds the Spark and Hadoop locations to your system `PATH`. It allows you to run the Spark shell directly from a command prompt window.
 1. Click Start and type environment.
 2. Select the result labelled Edit the system environment variables.
 3. A System Properties dialog box appears. In the lower-right corner, click Environment Variables and then click New in the next window.
-4. For Variable Name type SPARK_HOME.
-5. For Variable Value type C:\Spark\spark-3.5.0-bin-hadoop3 and click OK. If you changed the folder path, use that one instead.
-6. In the top box, click the Path entry, then click Edit. Be careful with editing the system path. Avoid deleting any entries already on the list.
+4. For Variable Name type `SPARK_HOME`.
+5. For Variable Value type `C:\Spark\spark-3.5.0-bin-hadoop3` and click OK. If you changed the folder path, use that one instead.
+6. In the top box, click the `Path` entry, then click Edit. Be careful with editing the system path. Avoid deleting any entries already on the list.
 7. You should see a box with entries on the left. On the right, click New.
-8. The system highlights a new line. Enter the path to the Spark folder C:\Spark\spark-3.5.0-bin-hadoop3\bin. We recommend using %SPARK_HOME%\bin to avoid possible issues with the path.
+8. The system highlights a new line. Enter the path to the Spark folder `C:\Spark\spark-3.5.0-bin-hadoop3\bin`. We recommend using `%SPARK_HOME%\bin` to avoid possible issues with the path.
 9. Repeat this process for Hadoop and Java.
-   - For Hadoop, the variable name is HADOOP_HOME and for the value use the path of the folder you created earlier: C:\Hadoop. Add C:\Hadoop\bin to the Path variable field, but we recommend using %HADOOP_HOME%\bin. 
-   - For Java, the variable name is JAVA_HOME and for the value use the path to your Java JDK directory (example, C:\Program Files\Java\<jdk_version>).
+   - For Hadoop, the variable name is `HADOOP_HOME` and for the value use the path of the folder you created earlier: `C:\Hadoop`. Add `C:\Hadoop\bin` to the Path variable field, but we recommend using `%HADOOP_HOME%\bin`. 
+   - For Java, the variable name is `JAVA_HOME` and for the value use the path to your Java JDK directory (example, `C:\Program Files\Java\<jdk_version>`).
 10. Click OK to close all open windows.
 
 ### Launch Spark
