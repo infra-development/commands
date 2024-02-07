@@ -17,10 +17,11 @@ spark = SparkSession.builder.master("local[*]").appName("pyspark-azure").getOrCr
 df = spark.read.csv("D:/files/business-employment-data.csv")
 df.show(20)
 ```
+In pycharm set interpreter which is python installed at location of current virtual environment.
+
 Now Create/Edit Run configuration
 
 1. give it name `pyspark-azure`
 2. Select the script `Sample.py`
-3. Add the environment variable `PYTHONPATH = C:\Spark\spark-3.5.0-bin-hadoop3\python`
 
 Save and run
