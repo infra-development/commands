@@ -35,9 +35,11 @@ Installing Apache Spark involves extracting the downloaded file to the desired l
 ### Add winutils.exe File
 Download the `winutils.exe` file for the underlying Hadoop version for the Spark installation you downloaded.
 1. Navigate to this URL https://github.com/cdarlint/winutils and inside the bin folder, locate winutils.exe, and click it.
-2. Find the Download button on the right side to download the file.
-3. Now, create new folders `Hadoop` and `bin` on C: using Windows Explorer or the Command Prompt.
-4. Copy the `winutils.exe` file from the Downloads folder to `C:\Hadoop\bin`
+2. Navigate to this URL https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/hadoop.dll and download `hadoop.dll` file.
+3. Find the Download button on the right side to download the file.
+4. Now, create new folders `Hadoop` and `bin` on `C:` using Windows Explorer or the Command Prompt.
+5. Copy the `winutils.exe` file from the Downloads folder to `C:\Hadoop\bin`
+6. Copy `hadoop.dll` file to the `C:\Hadoop\bin` and `C:\Windows\System32`
 
 ### Configure Environment Variables
 Configuring environment variables in Windows adds the Spark and Hadoop locations to your system `PATH`. It allows you to run the Spark shell directly from a command prompt window.
@@ -50,7 +52,7 @@ Configuring environment variables in Windows adds the Spark and Hadoop locations
 7. You should see a box with entries on the left. On the right, click New.
 8. The system highlights a new line. Enter the path to the Spark folder `C:\Spark\spark-3.5.0-bin-hadoop3\bin`. We recommend using `%SPARK_HOME%\bin` to avoid possible issues with the path.
 9. Repeat this process for Hadoop and Java.
-   - For Hadoop, the variable name is `HADOOP_HOME` and for the value use the path of the folder you created earlier: `C:\Hadoop`. Add `C:\Hadoop\bin` to the Path variable field, but we recommend using `%HADOOP_HOME%\bin`. 
+   - For Hadoop, the variable name is `HADOOP_HOME` and for the value use the path of the folder you created earlier: `C:\Hadoop`. Add `C:\Hadoop\bin` to the Path variable field, but we recommend using `%HADOOP_HOME%\bin`.
    - For Java, the variable name is `JAVA_HOME` and for the value use the path to your Java JDK directory (example, `C:\Program Files\Java\<jdk_version>`).
 10. Click OK to close all open windows.
 
